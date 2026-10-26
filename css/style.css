@@ -1,0 +1,147 @@
+/* Página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #edf1ee;
+    color: #333333;
+}
+
+/* Cabeçalho e rodapé */
+header, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #305844;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    background-color: #d4e3d9;
+}
+
+nav a {
+    margin: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #305844;
+    color: white;
+}
+
+a {
+    color: #305844;
+}
+
+footer a {
+    color: white;
+}
+
+/* Secções */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: #293b30;
+}
+
+h2 {
+    margin-top: 0;
+    color: #305844;
+}
+
+/* Pseudo-elemento */
+h2::before {
+    content: "• ";
+    color: #67936b;
+}
+
+/* Fotografia */
+.foto {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #305844;
+    border-radius: 5px;
+}
+
+/* Hobbies com Flexbox */
+.lista-hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-hobbies li {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #d4e3d9;
+}
+
+/* Horário */
+.tabela-horario {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #b8c8bd;
+    text-align: center;
+}
+
+thead {
+    background-color: #305844;
+    color: white;
+}
+
+/* Computador: quatro hobbies por linha */
+@media (min-width: 1024px) {
+    .lista-hobbies li {
+        width: 23%;
+    }
+}
+
+/* Tablet: dois hobbies por linha */
+@media (min-width: 601px) and (max-width: 1023px) {
+    .lista-hobbies li {
+        width: 48%;
+    }
+}
+
+/* Telemóvel: menu em coluna e um hobby por linha */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lista-hobbies li {
+        width: 100%;
+    }
+}
